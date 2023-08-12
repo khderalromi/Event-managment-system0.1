@@ -2,9 +2,10 @@
   "name": "event-managment-syste",
   "version": "0.0.0",
   "private": true,
+  "main":"app.js",
   "scripts": {
-    "start": "nodemon app.js",
-    "devStart": "nodemon server.js"
+    "start": "node app.js",
+    "devStart": "nodemon app.js"
   },
   "dependencies": {
     "bcrypt": "^5.1.0",
