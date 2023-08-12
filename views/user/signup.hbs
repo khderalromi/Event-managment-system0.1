@@ -1,0 +1,31 @@
+{{#each errorsSignUp}}
+    <div class="alert alert-danger">
+        <p>{{this}}</p>
+    </div>
+{{/each}}
+
+
+
+
+
+
+
+
+<div class="offset-md-4 col-md-4 signup">
+    <form name="signup" method="post">
+        <h5>Sign Up</h5>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" name="email" class="form-control" id="formGroupExampleInput" placeholder="Enter Your Email">
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" name="password" class="form-control" id="formGroupExampleInput2" placeholder="Enter Your Password">
+    </div>
+    <div class="mb-3">
+        <label for="confirm-password" class="form-label">Confirm-Password</label>
+        <input type="password" name="confirm-password" class="form-control" id="formGroupExampleInput2" placeholder="Enter Your Password Again">
+    </div>
+    <button type="submit" class="btn btn-primary">Sign Up</button>
+    </form>
+</div>

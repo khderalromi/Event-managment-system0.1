@@ -1,0 +1,31 @@
+
+<div class="container">
+{{#each cardgrid1}}
+    <div class="row col-md-6 offset-md-3">
+        {{#each this}}
+            <div class="col-md-12">
+                <figure class="figure">
+                    <img src={{this.imagepath}} class="figure-img img-fluid rounded" alt="...">
+                    <figcaption class="figure-caption">A caption for the above image.</figcaption>
+                </figure>
+            </div>
+        {{/each}}
+        
+    </div>
+{{/each}}
+
+
+{{#each cardgrid2}}
+    <div class="row col-md-6 offset-md-3">
+        {{#each this}}
+            <div class="col-md-4">
+                <figure class="figure">
+                    <img src={{this.imagepath}} class="figure-img img-fluid rounded" alt="...">
+                    <figcaption class="figure-caption">A caption for the above image.</figcaption>
+                </figure>
+            </div>
+        {{/each}}
+    </div>
+{{/each}}
+
+</div>
