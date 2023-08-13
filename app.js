@@ -37,9 +37,9 @@ app.use(express.urlencoded({extended: false}));
 app.use(cors())
 app.use(cookieParser());
 app.use(session({
-   resave: false,
+  secret: 'EVENT-MANAGMENT-SYSTEM_?@',
   saveUninitialized: false,
-  secret: 'EVENT-MANAGMENT-SYSTEM_?@'
+  resave: true
 }));
 app.use(flash());
 app.use(passport.initialize());
