@@ -37,7 +37,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(cors())
 app.use(cookieParser());
 app.use(session({
-   resave: true,
+   resave: false,
   saveUninitialized: false,
   secret: 'EVENT-MANAGMENT-SYSTEM_?@'
 }));
