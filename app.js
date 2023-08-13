@@ -39,7 +39,7 @@ app.use(cookieParser());
 app.use(session({
   secret: 'EVENT-MANAGMENT-SYSTEM_?@',
   saveUnitialized: false,
-  resave: true
+  resave: false
 }));
 app.use(flash());
 app.use(passport.initialize());
