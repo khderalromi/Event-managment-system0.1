@@ -11,7 +11,7 @@ const url='mongodb://0.0.0.0:27017';
 const {engine}=require('express-handlebars');
 var hbs = require('hbs');
 hbs.registerPartials(__dirname+'/views/partials');
-
+const db=require('./db')
 /******************middleware and database *******************/
  const auth=require('./middleware/auth')
 
@@ -20,12 +20,12 @@ var usersRouter = require('./routes/users');
 
 var app=express();
 const cors=require('cors')
-
+/*
 const mongoose=require('mongoose');
 mongoose.connect('mongodb://0.0.0.0:27017',{UseNewUrlParser:true}).then(() =>
 {
   console.log("connection successfully ")
-});
+});*/
 require('./config/passport');
 // view engine setup
 app.engine('handlebars', engine({ extname: '.hbs', defaultLayout: "layout.hbs"}))
@@ -96,7 +96,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 Server.listen(3000)
-process.on('unhandledRejection', err =>
+/*process.on('unhandledRejection', err =>
 {
   console.log(`ERROR:${err.message}`)
   console.log('shutting down the server due to unhandled promise rejection')
@@ -104,5 +104,5 @@ process.on('unhandledRejection', err =>
   {
     process.exit(1)
   })
-})
+})*/
 module.exports = app;
