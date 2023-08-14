@@ -185,7 +185,7 @@ router.post('/creatRoom',auth, (req, res, next) =>
 /********join room******* */
 router.get('/joinRoom',auth, (req, res,next) =>
 {
-  res.render('meet/joinRoom',{roomId: uuidV4()})
+  res.render('meet/joinroom',{roomId: uuidV4()})
   
 })
 
