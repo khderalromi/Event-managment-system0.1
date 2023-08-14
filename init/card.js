@@ -1,8 +1,5 @@
 const mongoose=require('mongoose');
-mongoose.connect('mongodb://0.0.0.0:27017',{UseNewUrlParser:true}).then(() =>
-{
-  console.log("connection successfully ")
-});
+const db=require('../db')
 const card=require('../models/cardshema');
 const cards=[new card({
     imagepath: '/images/three.jpg',
