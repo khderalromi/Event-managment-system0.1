@@ -1,8 +1,7 @@
 body{
     background-image: url('/images/four.jpg');
     background-repeat: no-repeat;
-    background-size: 100% 160%;
-    
+    background-size: 100% 120%;
 }
 
 .signin ,.signup{
