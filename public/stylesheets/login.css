@@ -1,0 +1,54 @@
+body{
+    background-image: url('/images/four.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 160%;
+    
+}
+
+.signin ,.signup{
+    border: 2px solid white;
+    margin-top: 3%;
+    padding: 3%;
+    background-color: rgba(50, 15, 5, 0.15);
+    border-radius: 40px;
+    color: white;
+}
+.signin .fa-circle-user,
+.signup .fa-circle-user{
+    font-size: 100px;
+    margin-left: 35%;
+}
+
+.signin h5,
+.signup h5{
+    margin-left: 40%;
+
+}
+
+.signin input,
+.signup input{
+    background-color:transparent;
+    border-width: 0 0 4px 0;
+}
+.signin input:focus,
+.signup input:focus{
+    background-color: transparent;
+    color: white;
+    
+}
+
+.signin button,
+.signup button{
+    width: -webkit-fill-available;
+    border-radius: 10px;
+    margin-top: 15px ;
+}
+.signin p{
+    font-size: 15px;
+}
+
+.signin p a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
