@@ -96,13 +96,5 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 Server.listen(3000)
-/*process.on('unhandledRejection', err =>
-{
-  console.log(`ERROR:${err.message}`)
-  console.log('shutting down the server due to unhandled promise rejection')
-  Server.close(() =>
-  {
-    process.exit(1)
-  })
-})*/
+
 module.exports = app;

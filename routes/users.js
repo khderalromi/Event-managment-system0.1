@@ -17,7 +17,7 @@ const auth=require('../middleware/auth')
 router.get('/signup', function (req, res, next)
 {
   var errorsSignUp=req.flash('error');
-  res.render('user/signup', {errorsSignUp: errorsSignUp})
+  res.render('user/signup', {errorsSignUp: errorsSignUp,style:'login.css'})
   
 });
 router.post('/signup', [
@@ -95,10 +95,12 @@ router.post('/signup', [
 
 /*****************************start sign in ************************************/
 
-router.get('/signin', (req, res) =>
+router.get('/signin', (req, res,next) =>
 {
-  res.render('user/signin')
-})
+  
+    res.render('user/signin',{style:'login.css'})
+  })
+  
 
 router.get('/protected', passport.authenticate('jwt', {session: false}),(req,res)=>{res.json(req.user)})
 router.post('/signin', (req, res) =>
