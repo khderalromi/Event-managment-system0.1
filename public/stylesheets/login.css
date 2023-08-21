@@ -1,11 +1,12 @@
 body{
     background-image: url('/images/four.jpg');
     background-repeat: no-repeat;
-    background-size: 100% 103%;
+    background-size: 100% 112%;
 }
 
 .signin ,.signup{
     border: 2px solid white;
+    
     margin-top: 3%;
     padding: 3% 4%;
     background-color: rgba(50, 15, 5, 0.15);
@@ -51,3 +52,9 @@ body{
     color: black;
     font-weight: bold;
 }
+
+@media (min-width: 300px) and (max-width: 770px){
+.signin,
+.signup{
+    width:42%
+}}
