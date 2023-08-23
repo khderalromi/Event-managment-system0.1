@@ -1,31 +1,38 @@
+<div class="large-container">
+    <div class="write-container">
+        <h5>Amazing Platform:<br>Best For Online<br> Conference Video</h5>
+        <p>By using this website platform everyone can connect to<br>each other quickly and easily</p>
+        <button><a href="/users/signin">Get Started</a></button>
+    </div>
+    <div class="mycontainer">
+        {{#each cardgrid1}}
+            <div class="row col-md-8 offset-md-4">
+                {{#each this}}
+                    <div class="col-md-12">
+                        <figure class="figure">
+                            <img src={{this.imagepath}} class="figure-img img-fluid rounded" alt="...">
+                            <!-- <figcaption class="figure-caption">A caption for the above image.</figcaption> -->
+                        </figure>
+                    </div>
+                {{/each}}
 
-<div class="container">
-{{#each cardgrid1}}
-    <div class="row col-md-6 offset-md-3">
-        {{#each this}}
-            <div class="col-md-12">
-                <figure class="figure">
-                    <img src={{this.imagepath}} class="figure-img img-fluid rounded" alt="...">
-                    <figcaption class="figure-caption">A caption for the above image.</figcaption>
-                </figure>
             </div>
         {{/each}}
-        
-    </div>
-{{/each}}
 
 
-{{#each cardgrid2}}
-    <div class="row col-md-6 offset-md-3">
-        {{#each this}}
-            <div class="col-md-4">
-                <figure class="figure">
-                    <img src={{this.imagepath}} class="figure-img img-fluid rounded" alt="...">
-                    <figcaption class="figure-caption">A caption for the above image.</figcaption>
-                </figure>
+        {{#each cardgrid2}}
+            <div class="row col-md-8 offset-md-4">
+                {{#each this}}
+                    <div class="col-md-6">
+                        <figure class="figure">
+                            <img src={{this.imagepath}} class="figure-img img-fluid rounded" alt="...">
+                            <!-- <figcaption class="figure-caption">A caption for the above image.</figcaption>-->
+                        </figure>
+                    </div>
+                {{/each}}
             </div>
         {{/each}}
-    </div>
-{{/each}}
 
+
+    </div>
 </div>

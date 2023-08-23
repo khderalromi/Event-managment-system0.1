@@ -5,7 +5,7 @@ const card=require('../models/cardshema')
 /* GET home page. */
 router.get('/', (req, res,next) =>
 {
-  res.redirect('/users/signin')
+  res.redirect('/users/main')
   
 })
 

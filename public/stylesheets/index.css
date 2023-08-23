@@ -1,0 +1,67 @@
+body {
+    background-image: url('/images/13.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+div.container {
+    max-width: 100%;
+}
+
+.large-container {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+
+
+
+}
+
+div .large-container .write-container {
+    order: 1;
+    color: white;
+    width: 50%;
+    margin: 5% 0 0 5%;
+
+}
+
+div .large-container .write-container h5 {
+    word-spacing: 5px;
+    font-size: 70px;
+}
+
+div .large-container .write-container p {
+    font-size: 20px;
+    margin-top: 5%;
+}
+
+div .large-container .write-container button {
+    background-color: rgb(20, 27, 22);
+    border-radius: 20%;
+    width: 30%;
+    height: 10%;
+    margin-top: 5%;
+
+}
+
+div .large-container .write-container button a {
+    text-decoration: none;
+    color: white;
+
+}
+
+div .mycontainer .row {
+    order: 2;
+
+}
+
+
+div .mycontainer {
+    margin: 5% 5% 0 0;
+    width: 50%;
+}
+
+nav.navbar.navbar-expand-lg.bg-body-tertiary {
+    --bs-bg-opacity: 0;
+}

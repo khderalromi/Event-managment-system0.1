@@ -143,7 +143,7 @@ router.post('/signin', (req, res) =>
 /* GET users listing. */
 
 /******* get main page ********/
-router.get('/main',auth, function(req, res, next) {
+router.get('/main', function(req, res, next) {
   card.find({}).then((resualt, error) =>{
     console.log(resualt)
     console.log('yyyeeess')
@@ -156,10 +156,10 @@ router.get('/main',auth, function(req, res, next) {
         cardgrid.push(resualt.slice(0, 1));
       } else if (i>1)
       {
-        cardgrid.push(resualt.slice(1,4))
+        cardgrid.push(resualt.slice(1,3))
       }
     }
-    res.render('index', {cardgrid1: cardgrid.slice(0,1), cardgrid2: cardgrid.slice(1,2)});
+    res.render('index', {cardgrid1: cardgrid.slice(0,1), cardgrid2: cardgrid.slice(1,2),style:'index.css'});
     
   }
   )  

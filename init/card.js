@@ -34,12 +34,10 @@ for (var i=0;i<cards.length;i++)
         if (error)
         {
             console.log('errooorr')
-            console.log(error);
-        
         } else
         {
             console.log('saved');
-            console.log(doc);
+            
             
             done++;
         };
@@ -51,3 +49,4 @@ for (var i=0;i<cards.length;i++)
         }
     })
 };
+
