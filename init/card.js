@@ -2,26 +2,33 @@ const mongoose=require('mongoose');
 const db=require('../db')
 const card=require('../models/cardshema');
 const cards=[new card({
-    imagepath: '/images/three.jpg',
+    imagepath: '/images/three.jpg'
     
 }),
 new card({
-    imagepath: '/images/six.jpg',
+    imagepath: '/images/six.jpg'
     
 }),
 new card({
-    imagepath: '/images/tow.jpg',
+    imagepath: '/images/tow.jpg'
     
 }),
 new card({
-    imagepath: '/images/four.jpg',
+    imagepath: '/images/one.jpg'
     
 }),
 new card({
-    imagepath: '/images/five.jpg',
+    imagepath: '/images/three.jpg'
     
 }),
-
+new card({
+    imagepath: '/images/social.jpg'
+    
+}),
+new card({
+    imagepath: '/images/five.jpg'
+    
+})
 ];
 
 var done=0;

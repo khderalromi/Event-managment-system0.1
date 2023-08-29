@@ -80,7 +80,13 @@ router.post('/signup', [
     res.cookie("token", token, {
       httpOnly:true
     })
-    res.redirect('/users/main')
+/*********to store email in cookies and show it in header ************/
+    const decoded=jwt.verify(token, "random string");
+    const profile=decoded.useremail;
+    res.cookie("myprofile", profile)
+
+    /*********************** *************/
+    res.redirect('/')
   })
     
   })
@@ -103,7 +109,7 @@ router.get('/signin', (req, res,next) =>
   
 
 router.get('/protected', passport.authenticate('jwt', {session: false}),(req,res)=>{res.json(req.user)})
-router.post('/signin', (req, res) =>
+router.post('/signin', (req, res,next) =>
 {
   user.findOne({email: req.body.email}).then((user) =>
   {
@@ -132,7 +138,13 @@ router.post('/signin', (req, res) =>
     res.cookie("token", token, {
       httpOnly:true
     })
-    return res.redirect('/users/main')
+/*********to store email in cookies and show it in header ************/
+    const decoded=jwt.verify(token, "random string");
+    const profile=decoded.useremail;
+    res.cookie("myprofile", profile)
+/******************** ***************************/
+  
+    res.redirect('/')
   })
 
   
@@ -140,34 +152,8 @@ router.post('/signin', (req, res) =>
 
 /***************************end sign in *******************************/
 
-/* GET users listing. */
-
-/******* get main page ********/
-router.get('/main', function(req, res, next) {
-  card.find({}).then((resualt, error) =>{
-    console.log(resualt)
-    console.log('yyyeeess')
-    var cardgrid=[];
-    var colgrid=3;
-    for (var i=0;i<=3;i+=colgrid)
-    {
-      if (i<1)
-      {
-        cardgrid.push(resualt.slice(0, 1));
-      } else if (i>1)
-      {
-        cardgrid.push(resualt.slice(1,3))
-      }
-    }
-    res.render('index', {cardgrid1: cardgrid.slice(0,1), cardgrid2: cardgrid.slice(1,2),style:'index.css'});
-    
-  }
-  )  
-});
-
 
 /**********start creat video room ****/
-
 const {v4: uuidV4}=require('uuid')
 router.get('/creatRoom',auth, (req, res,next) =>
 {
@@ -195,6 +181,13 @@ router.post('/joinRoom',auth, (req, res, next) =>
 {
   res.redirect('room/'+req.body.roomId)
 })
+
+
+
+/*****delete *****/
+
+
+
 
 
 module.exports = router;

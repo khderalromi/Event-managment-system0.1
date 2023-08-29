@@ -1,8 +1,13 @@
 body {
     background-image: url('/images/13.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 30%;
 
+}
+@media(max-width: 1000px) {
+    body {
+        background-size: 100% 90%;
+    }
 }
 
 div.container {
@@ -64,4 +69,170 @@ div .mycontainer {
 
 nav.navbar.navbar-expand-lg.bg-body-tertiary {
     --bs-bg-opacity: 0;
+    font-size: 22px;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu{
+    background-color: black;
+    
+}
+
+
+.navbar-expand-lg .navbar-nav .dropdown-item{
+color: white;
+font-size: 15px;
+font-weight: bold;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-item:hover{
+    color: black;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-divider{
+    color: white;
+}
+.nav-link.disabled.profile{
+    color: white;
+    background-color: black;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50%;
+   
+}
+
+.nav-item.email{
+     margin-left: 5%;
+}
+
+/****************advantages style*****************/
+div .advantages {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    margin-top: 10%;
+    
+
+
+
+}
+
+div .advantages h2 {
+    order: 2;
+    color: rgb(65, 54, 54);
+    width: 50%;
+    margin-left:5% ;
+    
+
+}
+div .advantages p{
+    order: 1;
+    width: 50%;
+    margin-right:10% ;
+}
+
+/****************abvantagesphoto**************/
+.advantagesphoto{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    margin-top: 5%;
+}
+
+
+
+.advantagesphoto .col-md-6.bigfigure {
+   padding: 5%;
+    width: 85%;
+   
+}
+.advantagesphoto .col-md-6.bigfigure .figure img{
+    background-color: rgb(153, 153, 144);
+    border-radius: 10%;
+    padding: 5%;
+}
+
+
+
+figure.figure figcaption.figure-caption h5{
+    margin-top: 5%;
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+figure.figure figcaption.figure-caption p{
+    margin-top: 5%;
+    font-size: 15px;
+}
+.makeEasy{
+    background-color:rgb(153, 153, 144); ;
+    padding: 5% 5% 2% 5%;
+}
+.makeEasy .one{
+    display: flex;
+    flex-direction: row;
+}
+.makeEasy .one h2{
+    width: 50%;
+}
+.makeEasy .one i{
+    width: 50%;
+    font-size: 100%;
+}
+
+.makeEasy .one i.fa-solid.fa-chart-simple{
+    font-size: 200px;
+    margin-left: 30%;
+}
+
+
+
+
+.makeEasy .tow {
+    display: flex;
+    flex-direction: row;
+}
+
+.makeEasy .tow h2 {
+    width: 50%;
+}
+
+.makeEasy .tow i {
+    width: 50%;
+    font-size: 100%;
+}
+
+.makeEasy .tow i.fa-solid.fa-chart-column {
+    font-size: 150px;
+    margin-left: 30%;
+}
+
+
+
+.makeEasy p{
+    margin-top: 3%;
+}
+
+
+.makeEasy .icons{
+    display: flex;
+    margin-top: 3%;
+    
+}
+
+.makeEasy .icons .col2,.makeEasy .icons .col3{
+    margin-left: 5%;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    color: white;
+    border-radius: 0% 0% 10% 10%;
+}
+
+footer .footer-col1,footer .footer-col2,footer .footer-col3,footer .footer-col4{
+    width: 25%;
+    padding: 7%;
 }

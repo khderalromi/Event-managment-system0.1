@@ -5,7 +5,7 @@ var cookieParser=require('cookie-parser');
 const session=require('express-session');
 const flash=require('connect-flash');
 const passport=require('passport');
-const jwt = require('jsonwebtoken')
+const jwt=require('jsonwebtoken');
 var logger = require('morgan');
 const url='mongodb://0.0.0.0:27017';
 const {engine}=require('express-handlebars');
@@ -13,7 +13,8 @@ var hbs = require('hbs');
 hbs.registerPartials(__dirname+'/views/partials');
 const db=require('./db')
 /******************middleware and database *******************/
- const auth=require('./middleware/auth')
+const auth=require('./middleware/auth')
+
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
